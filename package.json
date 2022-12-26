@@ -62,5 +62,16 @@
     "webpack": "^4.33.0",
     "webpack-cli": "^3.3.2",
     "webpack-dev-server": "^3.7.0"
+  },
+  "description": "🦄",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/auroraptor/december-29.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/auroraptor/december-29/issues"
   }
 }
