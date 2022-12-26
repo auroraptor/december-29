@@ -1,0 +1,25 @@
+@import "../../assets/colors";
+@import "../../assets/constants";
+
+
+.container {
+  padding-top: 3rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+
+  background: linear-gradient($BLUE_100, #FFFFFF);
+  // min-height: 100vh;
+}
+
+@media (max-width: $TABLET_WIDTH) {
+  .mainDiv {
+    padding-top: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+.title {
+  font-size: 40px;
+  text-align: center;
+}

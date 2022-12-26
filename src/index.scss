@@ -1,0 +1,625 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: ‘Open Sans’, sans-serif;
+  font-size: 18px;
+}
+
+*,
+*::before,
+*::after {
+  transition: all ease .3s;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+.container__wrapper{
+  max-width: 90vw;
+  margin:0 auto;
+}
+
+.container__content{
+  max-width: 80vw;
+  position: relative;
+  top:0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  z-index: 101;
+  margin:0 auto;
+/*// border:solid 2px green;*/
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+form {
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  padding: 20px;
+}
+
+input[type=text], input[type=search], input[type=password], select, textarea {
+
+  width: 100%;
+  max-width: 250px;
+  min-width: 250px;
+  background: #F7F7F9;
+  border: solid 2px #F7F7F9;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 23px 16px 10px 14px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  min-height: 40px;
+  resize: vertical;
+  box-sizing: border-box;
+  outline: none;
+  &:disabled {
+    border: solid 2px black;
+    background: #d2d2d2;
+  }
+  &:focus-visible {
+    border: solid 0 black;
+  }
+  &:focus {
+    border: solid 2px #6266EB;
+  }
+}
+
+input[type=search] {
+  width: 96%;
+  margin: 0 2%;
+  padding: 2px 10px;
+}
+
+input[type="file"] {
+  height: 0;
+  overflow: hidden;
+  width: 0;
+}
+
+input[type="file"] + label {
+  background: #f15d22;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  outline: none;
+  padding: 1rem 50px;
+  position: relative;
+  transition: all 0.3s;
+  vertical-align: middle;
+
+  &:hover {
+    background-color: darken(#f15d22, 10%);
+  }
+}
+
+textarea {
+  min-height: 150px;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.noscroll {
+  overflow-y: hidden;
+}
+
+
+label {
+  padding: 8px 6px 6px 0;
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: right;
+  width: 100%;
+  vertical-align: middle;
+}
+
+input[type=submit] {
+  background-color: #6266EB;
+  border-radius: 8px;
+  padding: 12px 28px 13px;
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  align-items: center;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 18px;
+
+}
+
+input[type=submit]:hover {
+  background-color: #0126bd;
+}
+
+@supports(-webkit-appearance: none) or (-moz-appearance: none) {
+  input[type='checkbox'],
+  input[type='radio'] {
+    --active: #275EFE;
+    --active-inner: #fff;
+    --focus: 2px rgba(39, 94, 254, .3);
+    --border: #BBC1E1;
+    --border-hover: #275EFE;
+    --background: #fff;
+    --disabled: #F6F8FF;
+    --disabled-inner: #E1E6F9;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 21px;
+    outline: none;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid var(--bc, var(--border));
+    background: var(--b, var(--background));
+    transition: background .3s, border-color .3s, box-shadow .2s;
+    &:after {
+      content: '';
+      display: block;
+      left: 0;
+      top: 0;
+      position: absolute;
+      //transition: transform var(--d-t, .3s) var(--d-t-e, ease), opacity var(--d-o, .2s);
+    }
+    &:checked {
+      --b: var(--active);
+      --bc: var(--active);
+      --d-o: .3s;
+      --d-t: .6s;
+      --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+    }
+    &:disabled {
+      --b: var(--disabled);
+      cursor: not-allowed;
+      opacity: .9;
+      &:checked {
+        --b: var(--disabled-inner);
+        --bc: var(--border);
+      }
+      & + label {
+        cursor: not-allowed;
+      }
+    }
+    &:hover {
+      &:not(:checked) {
+        &:not(:disabled) {
+          --bc: var(--border-hover);
+        }
+      }
+    }
+    &:focus {
+      box-shadow: 0 0 0 var(--focus);
+    }
+    &:not(.switch) {
+      width: 21px;
+      &:after {
+        opacity: var(--o, 0);
+      }
+      &:checked {
+        --o: 1;
+      }
+    }
+    & + label {
+      font-size: 14px;
+      line-height: 21px;
+      display: inline-block;
+      vertical-align: top;
+      cursor: pointer;
+      margin-left: 4px;
+    }
+  }
+  input[type='checkbox'] {
+    &:not(.switch) {
+      border-radius: 7px;
+      &:after {
+        width: 5px;
+        height: 9px;
+        border: 2px solid var(--active-inner);
+        border-top: 0;
+        border-left: 0;
+        left: 7px;
+        top: 4px;
+        transform: rotate(var(--r, 20deg));
+      }
+      &:checked {
+        --r: 43deg;
+      }
+    }
+    &.switch {
+      width: 38px;
+      border-radius: 11px;
+      &:after {
+        left: 2px;
+        top: 2px;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        background: var(--ab, var(--border));
+        transform: translateX(var(--x, 0));
+      }
+      &:checked {
+        --ab: var(--active-inner);
+        --x: 17px;
+      }
+      &:disabled {
+        &:not(:checked) {
+          &:after {
+            opacity: .6;
+          }
+        }
+      }
+    }
+  }
+  input[type='radio'] {
+    border-radius: 50%;
+    &:after {
+      width: 19px;
+      height: 19px;
+      border-radius: 50%;
+      background: var(--active-inner);
+      opacity: 0;
+      transform: scale(var(--s, .7));
+    }
+    &:checked {
+      --s: .5;
+    }
+  }
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: ‘Open Sans Condensed’, sans-serif;
+  text-align: left;
+  min-width: 30px;
+}
+
+td {
+  font-size: 14px;
+  font-family: ‘Open Sans Condensed’, sans-serif;
+  vertical-align: middle;
+
+  p, h6 {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+h1 {
+  color: #111;
+  //font-family: ‘Open Sans Condensed’, sans-serif;
+  font-family: Inter B, sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  margin: 0 0 0;
+  padding: 20px 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: #111;
+  //font-family: ‘Open Sans Condensed’, sans-serif;
+  font-family: Inter B, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 36px;
+  margin: 0 0 24px;
+  padding: 0 30px;
+  text-align: center;
+  // background-color: #0126bd;
+  /*text-transform: uppercase;*/
+}
+
+h3 {
+  color: #111;
+  //font-family: ‘Open Sans Condensed’, sans-serif;
+  font-family: Inter B, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 32px;
+  margin: 0 0 24px;
+  /*padding: 0 30px;*/
+  text-align: center;
+  /*text-transform: uppercase;*/
+}
+
+h4 {
+  color: #111;
+  //font-family: ‘Open Sans Condensed’, sans-serif;
+  font-family: Inter B, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height:28px;
+  margin: 0 0 20px;
+  /*padding: 0 30px;*/
+  /*text-align: center;*/
+  /*text-transform: uppercase;*/
+}
+
+h5 {
+  color: #111;
+  //font-family: ‘Open Sans Condensed’, sans-serif;
+  font-family: Inter B, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 0 0 16px;
+  /*padding: 0 30px;*/
+  /*text-align: center;*/
+  /*text-transform: uppercase;*/
+}
+
+h6 {
+  color: #111;
+  //font-family: ‘Open Sans Condensed’, sans-serif;
+  font-family: Inter B, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  margin: 0 0 0; // 0 0 12px
+  /*padding: 0 30px;*/
+  /*text-align: center;*/
+  /*text-transform: uppercase;*/
+}
+
+p {
+  color: #111;
+  //font-family: ‘Open Sans’, sans-serif;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0 0 13px;
+}
+
+a {
+  color: #0462af;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+a:hover {
+  text-decoration: underline
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  input[type=submit] {
+    width: 100%;
+    //margin-top: 0;
+    margin: 10px 0;
+  }
+
+  label {
+    text-align: left;
+    padding: 4px 4px 4px 0;
+    //background-color: #eea2ea;
+    width: 100%;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0 0 11px;
+  }
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 36px;
+    margin: 0 0 0;
+    padding: 10px 10px;
+  }
+  h2 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 32px;
+    margin: 0 0 0;
+    padding: 8px 8px;
+  }
+  h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    margin: 0 0 0;
+    padding: 6px 6px;
+  }
+
+  li {
+    font-size: 16px;
+  }
+}
+
+
+@font-face {
+  font-family: Circe;
+  src: url(assets/fonts/Circe-Thin/Circe-Thin.eot);
+  src: url(assets/fonts/Circe-Thin/Circe-Thin.eot?#iefix)
+  format('embedded-opentype'),
+  url(assets/fonts/Circe-Thin/Circe-Thin.woff) format('woff'),
+  url(assets/fonts/Circe-Thin/Circe-Thin.ttf) format('truetype');
+  font-style: normal;
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: Circe;
+  src: url(assets/fonts/Circe-ExtraLight/Circe-ExtraLight.eot);
+  src: url(assets/fonts/Circe-ExtraLight/Circe-ExtraLight.eot?#iefix)
+  format('embedded-opentype'),
+  url(assets/fonts/Circe-ExtraLight/Circe-ExtraLight.woff) format('woff'),
+  url(assets/fonts/Circe-ExtraLight/Circe-ExtraLight.ttf) format('truetype');
+  font-style: normal;
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: Circe;
+  src: url(assets/fonts/Circe-Light/Circe-Light.eot);
+  src: url(assets/fonts/Circe-Light/Circe-Light.eot?#iefix)
+  format('embedded-opentype'),
+  url(assets/fonts/Circe-Light/Circe-Light.woff) format('woff'),
+  url(assets/fonts/Circe-Light/Circe-Light.ttf) format('truetype');
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Circe;
+  src: url(assets/fonts/Circe-Regular/Circe-Regular.eot);
+  src: url(assets/fonts/Circe-Regular/Circe-Regular.eot?#iefix)
+  format('embedded-opentype'),
+  url(assets/fonts/Circe-Regular/Circe-Regular.woff) format('woff'),
+  url(assets/fonts/Circe-Regular/Circe-Regular.ttf) format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Circe;
+  src: url(assets/fonts/Circe-Bold/Circe-Bold.eot);
+  src: url(assets/fonts/Circe-Bold/Circe-Bold.eot?#iefix)
+  format('embedded-opentype'),
+  url(assets/fonts/Circe-Bold/Circe-Bold.woff) format('woff'),
+  url(assets/fonts/Circe-Bold/Circe-Bold.ttf) format('truetype');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Circe;
+  src: url(assets/fonts/Circe-ExtraBold/Circe-ExtraBold.eot);
+  src: url(assets/fonts/Circe-ExtraBold/Circe-ExtraBold.eot?#iefix)
+  format('embedded-opentype'),
+  url(assets/fonts/Circe-ExtraBold/Circe-ExtraBold.woff) format('woff'),
+  url(assets/fonts/Circe-ExtraBold/Circe-ExtraBold.ttf) format('truetype');
+  font-style: normal;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: Inter;
+  //src: url(assets/fonts/Circe-ExtraBold/Circe-ExtraBold.eot);
+  //src: url(assets/fonts/Circe-ExtraBold/Circe-ExtraBold.eot?#iefix)
+  //format('embedded-opentype'),
+  //url(assets/fonts/Circe-ExtraBold/Circe-ExtraBold.woff) format('woff'),
+  src: url(assets/fonts/Inter-Regular.ttf) format('truetype');
+  font-style: normal;
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: Inter;
+  //src: url(assets/fonts/Circe-ExtraBold/Circe-ExtraBold.eot);
+  //src: url(assets/fonts/Circe-ExtraBold/Circe-ExtraBold.eot?#iefix)
+  //format('embedded-opentype'),
+  //url(assets/fonts/Circe-ExtraBold/Circe-ExtraBold.woff) format('woff'),
+  src: url(assets/fonts/Inter-Bold.ttf) format('truetype');
+  font-style: normal;
+  font-weight: 600;
+}
