@@ -1,4 +1,6 @@
 import React from "react";
+import {AddMessage} from "../../containers/AddMessage";
+import {MessagesList} from "../../containers/MessagesList";
 import styles from "./styles.module.scss";
 
 function Profile() {
@@ -8,14 +10,12 @@ function Profile() {
         <article id="card" className={styles.card}>
           Card
         </article>
-        <section id="messages-list" className={styles.messages_list}>
-          Messages list
-        </section>
-        <section id="new-message" className={styles.new_message}>
-          New message
-        </section>
+        <MessagesList className={styles.messages_list} ></MessagesList>
+
+        <AddMessage className={styles.new_message}></AddMessage>
       </section>
     </div>
+
   );
 }
 

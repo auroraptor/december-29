@@ -1,2 +1,5 @@
 export const SET_USER_DATA = 'SET_USER_DATA';
 export const UPDATE_USER = 'UPDATE_USER';
+
+export const ADD_MESSAGE = 'ADD_MESSAGE';
+export const MESSAGE_RECEIVED = 'MESSAGE_RECEIVED';
