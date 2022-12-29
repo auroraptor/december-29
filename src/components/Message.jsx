@@ -1,9 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const Message = ({ message, author }) => (
+const Message = ({ message, author, date = new Date() }) => (
   <p>
     <i>{author}</i>: {message}
+    <i>{date.toString()}</i>
   </p>
 )
 

@@ -1,24 +1,22 @@
-import { UPDATE_USER, SET_USER_DATA } from "../types";
+import { CARD_RECEIVED, UPDATE_CARD } from "../types";
 
 const initialState = {
-  username: "",
-  first_name: "",
-  last_name: "",
-  middle_name: "",
-  email: "",
+  title: "",
+  description: "",
+  image: "",
   id: 0,
   loading: true,
 };
 
-export const UserReducer = (state = initialState, action) => {
+const card = (state = initialState, action) => {
   switch (action.type) {
-    case SET_USER_DATA:
+    case CARD_RECEIVED:
       return {
         ...state,
         ...action.payload,
         loading: false,
       };
-    case UPDATE_USER:
+    case UPDATE_CARD:
       return {
         ...state,
         ...action.payload,
@@ -27,3 +25,5 @@ export const UserReducer = (state = initialState, action) => {
       return state;
   }
 };
+
+export default card;

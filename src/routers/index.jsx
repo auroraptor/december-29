@@ -4,6 +4,15 @@ import { MAIN_URL } from "../constants";
 import ProfileRouter from "./ProfileRouter";
 import { Provider } from "react-redux";
 import store from "../store";
+import { messageReceived } from "../store/actions/message";
+
+store.dispatch(
+  messageReceived(
+    "Сообщение которое получил пользователь",
+    "Никакого имени",
+    "12:00"
+  )
+);
 
 const MainRouter = () => {
   return (

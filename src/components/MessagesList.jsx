@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Message from "./Message"
 
-const MessagesList = ({ messages, className }) => (
+const MessagesList = ({ className, messages }) => (
   <section id="messages-list" className={className}>
     <ul>
     {messages?.map(message => (

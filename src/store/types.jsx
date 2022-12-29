@@ -3,3 +3,6 @@ export const UPDATE_USER = 'UPDATE_USER';
 
 export const ADD_MESSAGE = 'ADD_MESSAGE';
 export const MESSAGE_RECEIVED = 'MESSAGE_RECEIVED';
+
+export const CARD_RECEIVED = 'CARD_RECEIVED';
+export const UPDATE_CARD = 'UPDATE_CARD';
