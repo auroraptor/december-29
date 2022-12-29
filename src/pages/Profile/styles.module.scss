@@ -28,23 +28,52 @@
 .main {
     display: flex;
     flex-direction: column;
+    border: 1px solid black;
+    min-height: calc(100vh - 3rem);
+    height: 2000px;
 }
+
 .new_message {
+    display: block;
     position: fixed;
     bottom: 0;
     padding: 5px;
     margin-left: 0px;
     border-top: 1px solid #3f3f3f;
 }
-.messages_list {
-    padding: 3rem 0 0 5px;
+.messages {
+    padding: 1rem 0 0 5px;
+}
+.messages__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .card {
-    margin-top: 3rem;
-    margin-right: 3rem;
-    position: fixed;
+    top: 3rem;
+    position: sticky;
     top: 0;
     padding: 5px;
-    border: 1px solid #3f3f3f;
+}
+
+.card__container {
+  height: 180px;
+  background-color: $GRAY_50;
+  border-radius: 10px;
+}
+
+.message {
+  background-color: $BLUE_400;
+  color: white;
+  border-radius: 10px;
+  padding: 15px;
+  max-width: 75%;
+  align-self: end;
+  
+}
+
+.me {
+  background-color: $GRAY_300;
+  color: black;
 }

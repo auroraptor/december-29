@@ -1,10 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Message from "./Message"
+import styles from "../pages/Profile/styles.module.scss";
 
-const MessagesList = ({ className, messages }) => (
-  <section id="messages-list" className={className}>
-    <ul>
+
+const MessagesList = ({ messages }) => (
+  <section id="messages-list" className={styles.messages}>
+    <ul className={styles.messages__list}>
     {messages?.map(message => (
       <Message
       key={message.id}
