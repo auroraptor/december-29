@@ -22,7 +22,7 @@ const AddMessage = (props) => {
       className={styles.input}
       placeholder={"Введите текст сообщения"}
       />
-      <button className={styles.button} onClick={
+      {/* <button className={styles.button} onClick={
         (e) => {
             props?.dispatch(input.value, 'Me')
             input.value = ''
@@ -30,7 +30,7 @@ const AddMessage = (props) => {
           ref={(node) => {
           input = node
         }
-      }>Отправить</button>
+      }>Отправить</button> */}
     </section>
   )
 }
