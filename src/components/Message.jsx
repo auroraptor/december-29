@@ -3,10 +3,10 @@ import PropTypes from "prop-types"
 import styles from "../pages/Profile/styles.module.scss";
 
 
-const Message = ({ message, author, date = new Date() }) => (
-  <div className={styles.message}>
+const Message = ({ message, author, date = "dd.mm.yyyy 00:00"}) => (
+  <div className={`${styles.message} ${author === 'Me' && styles.me}`}>
     <i>{author}</i>: {message}
-    <i>{date.toString()}</i>
+    <div className={styles.date}>{date.toString()}</div>
   </div>
 )
 

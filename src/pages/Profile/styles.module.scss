@@ -1,13 +1,12 @@
 @import "../../assets/colors";
 @import "../../assets/constants";
 
-
 .container {
   padding-top: 3rem;
   padding-left: 3rem;
   padding-right: 3rem;
 
-  background: linear-gradient($BLUE_100, #FFFFFF);
+  background: linear-gradient($BLUE_100, #ffffff);
   min-height: 100vh;
   width: 100%;
 }
@@ -26,35 +25,32 @@
 }
 
 .main {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid black;
-    min-height: calc(100vh - 3rem);
-    height: 2000px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  height: calc(100vh - 3rem);
 }
 
 .new_message {
-    display: block;
-    position: fixed;
-    bottom: 0;
-    padding: 5px;
-    margin-left: 0px;
-    border-top: 1px solid #3f3f3f;
+  display: block;
+  padding: 5px;
+  margin-left: 0px;
+  border-top: 1px solid #3f3f3f;
 }
-.messages {
-    padding: 1rem 0 0 5px;
-}
+
 .messages__list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  padding: 1rem 0 3rem 5px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  gap: 15px;
 }
 
 .card {
-    top: 3rem;
-    position: sticky;
-    top: 0;
-    padding: 5px;
+  top: 3rem;
+  position: sticky;
+  top: 0;
+  padding: 5px;
 }
 
 .card__container {
@@ -69,11 +65,26 @@
   border-radius: 10px;
   padding: 15px;
   max-width: 75%;
+  min-width: 288px;
   align-self: end;
-  
+  margin-right: 15px;
 }
 
 .me {
-  background-color: $GRAY_300;
+  background-color: $GRAY_200;
   color: black;
+  align-self: start;
+  margin-left: 15px;
+}
+
+.date {
+  text-align: end;
+  margin-top: 5px;
+}
+
+.button {
+  background-color: $BLUE_400;
+  color: white;
+  min-height: 40px;
+  border-radius: 6px;
 }

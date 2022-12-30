@@ -7,13 +7,11 @@ export const addMessage = (message, author) => ({
   id: nextMessageId++,
   message,
   author,
-  date: Date.now()
 });
 
-export const messageReceived = (message, author, date) => ({
+export const messageReceived = (message, author) => ({
   type: MESSAGE_RECEIVED,
   id: nextMessageId++,
   message,
   author,
-  date,
 });

@@ -8,11 +8,39 @@ import { messageReceived } from "../store/actions/message";
 
 store.dispatch(
   messageReceived(
-    "Сообщение которое получил пользователь",
-    "Никакого имени",
-    "12:00"
+    " 1 Aute ea et pariatur ad aliquip voluptate reprehenderit incididunt id. Cupidatat deserunt mollit incididunt reprehenderit culpa. Laborum est in fugiat commodo et. Ipsum nulla ipsum est exercitation quis esse cillum sint commodo.",
+    "Dr. Virginia Wehner",
   )
 );
+
+store.dispatch(
+  messageReceived(
+    "2 Culpa ea in est",
+    "Me",
+  )
+);
+
+store.dispatch(
+  messageReceived(
+    " 3 Duis amet id reprehenderit voluptate duis.",
+    "Dr. Virginia Wehner",
+  )
+);
+
+store.dispatch(
+  messageReceived(
+    " 4 Qui excepteur dolore ad nulla duis aliqua laborum nostrud nisi.",
+    "Me",
+  )
+);
+
+store.dispatch(
+  messageReceived(
+    "5 Duis amet id reprehenderit voluptate duis.",
+    "Dr. Virginia Wehner",
+  )
+);
+
 
 const MainRouter = () => {
   return (

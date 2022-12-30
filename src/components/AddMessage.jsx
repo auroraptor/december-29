@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from "../pages/Profile/styles.module.scss";
+
 
 const AddMessage = (props) => {
   let input
 
   return (
-    <section id="new-message" className={props.className}>
+    <section id="new-message" className={styles.new_message}>
       <input
         onKeyPress={(e) => {
         if (e.key === 'Enter') {
@@ -17,7 +19,18 @@ const AddMessage = (props) => {
         ref={(node) => {
         input = node
       }}
+      className={styles.input}
+      placeholder={"Введите текст сообщения"}
       />
+      <button className={styles.button} onClick={
+        (e) => {
+            props?.dispatch(input.value, 'Me')
+            input.value = ''
+        }}
+          ref={(node) => {
+          input = node
+        }
+      }>Отправить</button>
     </section>
   )
 }

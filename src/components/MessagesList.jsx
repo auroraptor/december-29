@@ -4,8 +4,8 @@ import Message from "./Message"
 import styles from "../pages/Profile/styles.module.scss";
 
 
-const MessagesList = ({ messages }) => (
-  <section id="messages-list" className={styles.messages}>
+const MessagesList = ({ messages }) => {
+  return (
     <ul className={styles.messages__list}>
     {messages?.map(message => (
       <Message
@@ -14,8 +14,7 @@ const MessagesList = ({ messages }) => (
       />
     ))}
     </ul>
-  </section>
-)
+)}
 
 MessagesList.propTypes = {
   messages: PropTypes.arrayOf(
