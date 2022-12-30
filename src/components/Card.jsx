@@ -3,20 +3,39 @@ import PropTypes from "prop-types";
 import { FiX } from "react-icons/fi";
 import styles from "../pages/Profile/styles.module.scss";
 
-const Card = ({ title="Входящий запрос", description="Описание товара, характеристики будут тут", image="https://openmoji.org/data/color/svg/1F529.svg" }) => (
+const Card = ({
+  title = "Входящий запрос",
+  description = "Описание товара, характеристики будут тут",
+  image = "https://openmoji.org/data/color/svg/1F529.svg",
+  price = "00 000 - 00 000",
+  deliveryDate = "DD MM YYYY",
+  condition="New",
+  count = "00 000",
+  address = "Address",
+}) => (
   <article id="card" className={styles.card}>
     <div className={styles.card__container}>
       <div className={styles.card__row}>
-        <img src={image} alt="Изображение товара" className={styles.image}></img>
+        <img
+          src={image}
+          alt="Изображение товара"
+          className={styles.image}
+        ></img>
         <div className={styles.card__description}>
           <h4 className={styles.card__title}>{title}</h4>
           <p className={styles.card__name}>{description}</p>
         </div>
-        <button type="button" onClick={() => alert('что-то происходит')} className={styles.card__button}>
-          <FiX/>Удалить ответ</button>
+        <button
+          type="button"
+          onClick={() => alert("что-то происходит")}
+          className={styles.card__button}
+        >
+          <FiX />
+          Удалить ответ
+        </button>
       </div>
-      <div className={styles.card__row}>
-        <table>
+      <div className={`${styles.card__row} ${styles.card__table}`}>
+        <table className={styles.card__table}>
           <thead>
             <tr>
               <th className={styles.th}>Цена</th>
@@ -28,13 +47,13 @@ const Card = ({ title="Входящий запрос", description="Описан
           </thead>
           <tbody>
             <tr>
-              <td className={styles.td}>00 000 000</td>
-              <td className={styles.td}>00 000 - 00 000</td>
-              <td className={styles.td}>Новый</td>
-              <td className={styles.td}>00 января 2023</td>
-              <td className={styles.td}>Maryfort</td>
+              <td className={styles.td}>{price}</td>
+              <td className={styles.td}>{count}</td>
+              <td className={styles.td}>{condition}</td>
+              <td className={styles.td}>{deliveryDate}</td>
+              <td className={styles.td}>{address}</td>
             </tr>
-            </tbody>
+          </tbody>
         </table>
       </div>
     </div>

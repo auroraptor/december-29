@@ -53,7 +53,7 @@
 }
 
 .card__container {
-  height: 216px;
+  min-height: 216px;
   background-color: $GRAY_50;
   border-radius: 10px;
 }
@@ -159,4 +159,10 @@ input.input {
 .td {
   font-weight: bold;
   max-width: 144px;
+}
+
+@media (max-width: $TABLET_WIDTH) {
+  .card__table {
+    display: none;
+  }
 }
