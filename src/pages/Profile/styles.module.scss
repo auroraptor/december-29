@@ -36,6 +36,7 @@
   padding: 5px;
   margin-left: 0px;
   border-top: 1px solid #3f3f3f;
+  position: relative;
 }
 
 .messages__list {
@@ -71,7 +72,7 @@
 }
 
 .me {
-  background-color: $GRAY_200;
+  background-color: $BLUE_100;
   color: black;
   align-self: start;
   margin-left: 15px;
@@ -83,8 +84,21 @@
 }
 
 .button {
+  margin: auto;
   background-color: $BLUE_400;
   color: white;
-  min-height: 40px;
+  width: 144px;
   border-radius: 6px;
+  position: absolute;
+  top: 0;
+  left: auto;
+  bottom: 0;
+  right: 20px;
+  min-height: 50px;
+  max-height: 50px;
+  padding: 10px 16px 10px 14px;
+}
+
+input.input {
+  max-width: 100%;
 }
