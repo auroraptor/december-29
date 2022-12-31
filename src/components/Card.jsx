@@ -61,8 +61,13 @@ const Card = ({
 );
 
 Card.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  image: PropTypes.string,
+  price: PropTypes.string,
+  deliveryDate: PropTypes.string,
+  condition: PropTypes.string,
+  address: PropTypes.string,
 };
 
 export default Card;

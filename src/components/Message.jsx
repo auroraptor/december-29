@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 import styles from "../pages/Profile/styles.module.scss";
 
 const Message = ({ message, author, date }) => {
-  console.log(message, date);
-
   return (
     <div
       className={`${styles.message} ${
