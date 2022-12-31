@@ -32,7 +32,8 @@ MessagesList.propTypes = {
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       message: PropTypes.string.isRequired,
-      author: PropTypes.string.isRequired
+      author: PropTypes.string.isRequired,
+      date: PropTypes.string.isRequired,
     }).isRequired
   ).isRequired
 }
