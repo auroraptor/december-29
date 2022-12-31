@@ -7,11 +7,11 @@ const Card = ({
   title = "Входящий запрос",
   description = "Описание товара, характеристики будут тут",
   image = "https://openmoji.org/data/color/svg/1F529.svg",
-  price = "00 000 - 00 000 e",
-  deliveryDate = "DD MM YYYY",
-  condition="New",
-  count = "00 000",
-  address = "Address",
+  price = `39 000 - 50 000 ₽`,
+  deliveryDate = "10 января 2023",
+  condition="Новый",
+  count = "10 000",
+  address = "г.Москва, Королёва 12",
 }) => (
   <article id="card" className={styles.card}>
     <div className={styles.card__container}>
