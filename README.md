@@ -18,6 +18,8 @@
 
 - [x] Имитация запросов реализована с помощью API [🌊 kanye.rest](https://kanye.rest/) - пользователь вводит сообщение и получает цитату Канье Веста в ответ спустя 1 секунду. 
 
+![GIF](https://media.giphy.com/media/n3tCfcBq7Pdyh1BNOD/giphy.gif)
+
 
 ### Что можно улучшить
 
