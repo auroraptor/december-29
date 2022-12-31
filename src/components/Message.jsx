@@ -6,12 +6,12 @@ const Message = ({ message, author, date }) => {
   return (
     <div
       className={`${styles.message} ${
-        author === "Me" && styles.message_user_me
+        author !== "Me" && styles.message_user_res
       }`}
     >
       {message}
       <div
-        className={`${styles.date} ${author === "Me" && styles.date_user_me}`}
+        className={`${styles.date} ${author !== "Me" && styles.date_user_res}`}
       >
         {date}
       </div>
