@@ -1,6 +1,9 @@
-import { connect } from 'react-redux'
-import CardComponent from '../components/Card'
+import { connect } from "react-redux";
+import CardComponent from "../components/Card";
 
-export const Card = connect(state => ({
-  card: state.card
-}), {})(CardComponent)
+export const Card = connect(
+  (state) => ({
+    card: state.card,
+  }),
+  {}
+)(CardComponent);
