@@ -10,9 +10,9 @@ export const cardReceived = (title, description, image, id) => ({
 
 export const updateCard = (data) => {
   return async (dispatch) => {
-      dispatch({
-          type: UPDATE_CARD,
-          payload: data,
-      });
+    dispatch({
+      type: UPDATE_CARD,
+      payload: data,
+    });
   };
 };
