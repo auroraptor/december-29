@@ -48,7 +48,7 @@ const AddMessage = (props) => {
           input = node;
         }}
         className={styles.input}
-        placeholder={"Введите текст сообщения"}
+        placeholder={"Введите текст"}
       />
       <button type="submit" className={styles.button}>
         Отправить
