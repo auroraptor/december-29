@@ -3,7 +3,9 @@ export const fakeMessages = [
     '🌙',
     'Two years ago we had 50 million people subscribed to music streaming services around the world. Today we have 400 million.',
     '👾',
-    'Just stop lying about shit. Just stop lying.'
+    'Just stop lying about shit. Just stop lying.',
+    '🚀',
+    'We as a people will heal. We will insure the well being of each other',
 ]
 
 const date = new Date('14 March 2023 13:26');
