@@ -48,10 +48,10 @@ const AddMessage = (props) => {
           input = node;
         }}
         className={styles.input}
-        placeholder={"Введите текст"}
+        placeholder={"Type something"}
       />
       <button type="submit" className={styles.button}>
-        Отправить
+        Send
       </button>
     </form>
   );

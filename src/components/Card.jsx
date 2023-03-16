@@ -4,21 +4,21 @@ import { FiX } from "react-icons/fi";
 import styles from "../pages/Profile/styles.module.scss";
 
 const Card = ({
-  title = "Входящий запрос",
-  description = "Описание товара, характеристики будут тут",
-  image = "https://openmoji.org/data/color/svg/1F529.svg",
-  price = `39 000 - 50 000 ₽`,
-  deliveryDate = "10 января 2023",
-  condition = "Новый",
-  count = "10 000",
-  address = "г.Москва, Королёва 12",
+  title = "Title",
+  description = "Description",
+  image = "https://openmoji.org/data/color/svg/1F680.svg",
+  price = `price`,
+  deliveryDate = "date",
+  condition = "condition",
+  count = "count",
+  address = "address",
 }) => (
   <article id="card" className={styles.card}>
     <div className={styles.card__container}>
       <div className={styles.card__row}>
         <img
           src={image}
-          alt="Изображение товара"
+          alt="umo mo"
           className={styles.image}
         ></img>
         <div className={styles.card__description}>
@@ -31,18 +31,18 @@ const Card = ({
           className={styles.card__button}
         >
           <FiX />
-          Удалить ответ
+          Remove
         </button>
       </div>
       <div className={`${styles.card__row} ${styles.card__table}`}>
         <table className={styles.card__table}>
           <thead>
             <tr>
-              <th className={styles.th}>Цена</th>
-              <th className={styles.th}>Количество</th>
-              <th className={styles.th}>Состояние</th>
-              <th className={styles.th}>Дата доставки</th>
-              <th className={styles.th}>Адрес доставки</th>
+              <th className={styles.th}>Price</th>
+              <th className={styles.th}>Count</th>
+              <th className={styles.th}>Condition</th>
+              <th className={styles.th}>Date</th>
+              <th className={styles.th}>Address</th>
             </tr>
           </thead>
           <tbody>
