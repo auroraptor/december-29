@@ -34,7 +34,7 @@ const Card = ({
           Remove
         </button>
       </div>
-      <div className={`${styles.card__row} ${styles.card__table}`}>
+      {/* <div className={`${styles.card__row} ${styles.card__table}`}>
         <table className={styles.card__table}>
           <thead>
             <tr>
@@ -55,7 +55,7 @@ const Card = ({
             </tr>
           </tbody>
         </table>
-      </div>
+      </div> */}
     </div>
   </article>
 );
